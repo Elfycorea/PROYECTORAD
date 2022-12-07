@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+              Title="REGISTRO" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PROYECTORAD.Views.PageEstudiante">
+
+    <ScrollView>
+        <Grid Padding="20" ColumnSpacing="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <Grid Grid.Row="0" Grid.Column="0">
+                <StackLayout>
+                    <Label Text="Id: " IsVisible="False" FontAttributes="Bold"/>
+                    <Entry  x:Name="txtid" IsVisible="False"/>
+                    <Label Text="NOMBRES:" FontAttributes="Bold"/>
+                    <Entry x:Name="txtnombres" Placeholder="Escriba sus nombres" Keyboard="Text"  FontSize="Small" FlexLayout.AlignSelf="Stretch" HorizontalOptions="FillAndExpand" TextColor="White" BackgroundColor="DarkSalmon"  ClearButtonVisibility="WhileEditing"/>
+                    <Label Text="APELLIDOS:" Grid.Row="4" FontAttributes="Bold"/>
+                    <Entry x:Name="txtapellidos" Placeholder="Escriba sus apellidos" Keyboard="Text" FontSize="Small" FlexLayout.AlignSelf="Stretch" HorizontalOptions="FillAndExpand" TextColor="White" BackgroundColor="DarkSalmon" ClearButtonVisibility="WhileEditing" />
+                    <Label Text="FECHA NACIMIENTO:" Grid.Row="2" FontAttributes="Bold"/>
+                    <Entry x:Name="txtfechanacimiento" Placeholder="Escriba su fecha nacimiento" Keyboard="Text" FontSize="Small" FlexLayout.AlignSelf="Stretch" HorizontalOptions="FillAndExpand" TextColor="White" BackgroundColor="DarkSalmon" ClearButtonVisibility="WhileEditing"/>
+                    <Label Text="SELECCIONE UN PAIS:" FontAttributes="Bold" />
+                    <Picker  BackgroundColor="DarkSalmon"
+                          HorizontalOptions="FillAndExpand" TextColor="White"  TitleColor="Transparent"   >
+                        <Picker.Items>
+                            <x:String>Honduras(504)</x:String>
+                            <x:String>Costa Rica</x:String>
+                            <x:String>Guatemala</x:String>
+                            <x:String>El Salvador</x:String>
+                        </Picker.Items>
+                    </Picker>
+
+                    <Label Text="DEPARTAMENTO:" Grid.Row="2" FontAttributes="Bold"/>
+                    <Entry x:Name="txtdepto" Placeholder="Escriba un departamento"   Keyboard="Text" FontSize="Small" FlexLayout.AlignSelf="Stretch" HorizontalOptions="FillAndExpand" TextColor="White" BackgroundColor="DarkSalmon" ClearButtonVisibility="WhileEditing" />
+                    <Label Text="MUNICIPIO:" Grid.Row="2" FontAttributes="Bold"/>
+                    <Entry x:Name="txtmunicipio" Placeholder="Escriba un municipio"  Keyboard="Text" FontSize="Small" FlexLayout.AlignSelf="Stretch" HorizontalOptions="FillAndExpand" TextColor="White" BackgroundColor="DarkSalmon" ClearButtonVisibility="WhileEditing" />
+                   <Label Text="ESTADO CIVIL:" FontAttributes="Bold" />
+                    <Picker  BackgroundColor="DarkSalmon"
+                          HorizontalOptions="FillAndExpand" TextColor="White"  TitleColor="Transparent"  >
+                        <Picker.Items>
+                            <x:String>Soltero (a)</x:String>
+                            <x:String>Casado (a)</x:String>
+                            <x:String>Union Libre</x:String>
+                            <x:String>Divorciado</x:String>
+                        </Picker.Items>
+                    </Picker>
+                    <Label Text="TELEFONO:"  FontAttributes="Bold" />
+                    <Entry x:Name="txtelefono" Placeholder="Escriba su numero telefono" Keyboard="Telephone" FontSize="Small" FlexLayout.AlignSelf="Stretch" HorizontalOptions="FillAndExpand" TextColor="White" BackgroundColor="DarkSalmon" />
+                </StackLayout>
+            </Grid >
+            <Grid Grid.Row="1" Grid.Column="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <Button x:Name="btnregistrar"  Text="REGISTRAR ESTUDIANTE" Clicked="btnregistrar_Clicked"    BorderRadius="20"  FontSize="Medium" TextColor="Black" BorderColor="Black" BackgroundColor="BlanchedAlmond"  CornerRadius="5" FlexLayout.AlignSelf="Stretch"  HorizontalOptions="Center" ></Button>
+               
+                
+
+            </Grid>
+
+        </Grid>
+    </ScrollView>
+</ContentPage>
